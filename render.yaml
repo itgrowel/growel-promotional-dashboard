@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: growel-promotional-dashboard
+    runtime: node
+    plan: starter
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 22.9.0
+      - key: SQL_SERVER
+        sync: false
+      - key: SQL_DATABASE
+        sync: false
+      - key: SQL_USER
+        sync: false
+      - key: SQL_PASSWORD
+        sync: false
+      - key: SESSION_SECRET
+        sync: false
+      - key: SQL_PORT
+        value: "1433"
+      - key: SQL_ENCRYPT
+        value: "true"
+      - key: SQL_TRUST_SERVER_CERTIFICATE
+        value: "false"
