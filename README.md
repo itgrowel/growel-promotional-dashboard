@@ -92,7 +92,7 @@ Do not commit `.env` or put database credentials in browser-exposed `VITE_*` var
 The included [`render.yaml`](./render.yaml) configures a Node web service, production build/start commands, and the `/api/health` check. To deploy:
 
 1. Push this repository to GitHub without `.env`, the project ZIP, or the request PDF. The ZIP and PDF are excluded by `.gitignore`.
-2. In Render, create a Blueprint instance and connect the GitHub repository. Review the `growel-promotional-dashboard` web service and its paid Starter plan.
+2. In Render, create a Blueprint instance and connect the GitHub repository. Review the `growel-promotional-dashboard` web service on the Free plan. Free services can sleep when idle and may take longer to respond on the first request.
 3. Enter `SQL_SERVER`, `SQL_DATABASE`, `SQL_USER`, `SQL_PASSWORD`, and a unique `SESSION_SECRET` when Render prompts for the private values. Do not put these in the repository. Keep the SQL encryption settings enabled.
 4. Configure the SQL Server firewall to allow the Render service to connect. Deploy and wait for `/api/health` to pass.
 5. Before opening the service to users, run `npm run bootstrap:admin` once from a trusted machine with `.env` configured to the production database, then remove the `BOOTSTRAP_ADMIN_*` variables from that local `.env`. Never add bootstrap passwords to the repository or Render logs.
