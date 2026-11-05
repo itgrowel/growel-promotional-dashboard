@@ -1,6 +1,6 @@
 # Growel Promotional Operations Dashboard
 
-The app is built with React and JavaScript. Real accounts and operational records are stored in Microsoft SQL Server. The app server requires Node.js 22.9 or later and must run as a Node.js server; static-only hosting is not supported.
+The app is built with React and JavaScript. Real accounts and operational records are stored in Microsoft SQL Server. The app server requires Node.js 22.12 or later and must run as a Node.js server; static-only hosting is not supported.
 
 ## Project structure
 
@@ -78,7 +78,7 @@ The Reports page filters the available records by request year and exports that 
 
 ## Production deployment
 
-Deploy the built app to a Node.js 22.9+ host that supports a persistent Node server process. Configure SQL credentials and `SESSION_SECRET` as the host's private environment secrets, allow the host to reach the SQL Server firewall/network, then run:
+Deploy the built app to a Node.js 22.12+ host that supports a persistent Node server process. Configure SQL credentials and `SESSION_SECRET` as the host's private environment secrets, allow the host to reach the SQL Server firewall/network, then run:
 
 ```sh
 npm run build
